@@ -53,13 +53,12 @@ export default function PreviewPage() {
         {articles.map((article, index) => (
           <div key={index} className="item border p-4 rounded shadow">
             {article.title &&
-              <a href={article.link} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-green-700 hover:underline">
                 <h2>{article.title}</h2>
-              </a>
             }
             {article.snippet && <p className="text-sm text-gray-600">{article.snippet}</p>}
             {article.date && <p className="text-xs text-gray-400">{article.date}</p>}
             {article.img && <img src={article.img} alt="Article Image" className="mt-2 max-h-40 object-cover"/>}
+            {article.link && <a href={`${url}${article.link}`}>Go to article</a>}
           </div>
         ))}
       </div>

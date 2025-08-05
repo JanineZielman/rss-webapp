@@ -10,7 +10,7 @@ export async function scrapeWebsite(url, className) {
   $(`.${className}`).each((i, elem) => {
     articles.push({
       title: $(elem).find('h1, h2, h3').first().text().trim(),
-      link: $(elem).find('a').first().attr('href'),
+      link: $(elem).find('a').first().attr('href') || $(elem).attr('href'),
       snippet: $(elem).find('p').first().text().trim(),
       date: $(elem).find('.date-time').first().text().trim(),
       img: $(elem).find('img').attr('src'),
