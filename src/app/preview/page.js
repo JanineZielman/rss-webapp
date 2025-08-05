@@ -58,7 +58,7 @@ export default function PreviewPage() {
             {article.snippet && <p className="text-sm text-gray-600">{article.snippet}</p>}
             {article.date && <p className="text-xs text-gray-400">{article.date}</p>}
             {article.img && <img src={article.img} alt="Article Image" className="mt-2 max-h-40 object-cover"/>}
-            {article.link && <a href={`${url}${article.link}`}>Go to article</a>}
+            {article.link && <a target='_blank' href={`${url}${article.link}`}>Go to article</a>}
           </div>
         ))}
       </div>
