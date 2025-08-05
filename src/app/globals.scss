@@ -33,3 +33,18 @@ p{
   box-shadow: 10px 10px 14px -6px #F97068;
 }
 
+
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  .item{
+    width: 20vw;
+    padding: 14px;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
